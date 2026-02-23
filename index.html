@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sagar S S — Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- ══════════ LAMP INTRO ══════════ -->
+<div id="lampScreen">
+  <div class="lamp-cursor" id="lampCursor"></div>
+  <div class="stars" id="stars"></div>
+
+  <div class="table-surface"></div>
+
+  <div class="lamp-scene">
+    <!-- Table lamp structure -->
+    <div class="lamp-base"></div>
+    <div class="lamp-pole"></div>
+    <div class="lamp-neck"></div>
+    <div class="lamp-fixture" id="lampFixture">
+      <div class="lamp-shade">
+        <div class="shade-inner"></div>
+        <div class="bulb" id="bulb"></div>
+      </div>
+      <div class="light-cone" id="lightCone"></div>
+      <div class="light-glow" id="lightGlow"></div>
+    </div>
+
+    <!-- Pull string hangs from side of shade -->
+    <div class="pull-string-wrap" id="pullWrap">
+      <canvas class="string-canvas" id="stringCanvas" width="80" height="140"></canvas>
+      <div class="string-ball" id="stringBall">
+        <div class="ball-inner"></div>
+      </div>
+    </div>
+
+    <div class="floor-glow" id="floorGlow"></div>
+  </div>
+
+  <div class="pull-hint" id="pullHint">
+    <div class="hint-arrows">
+      <span>← pull the string →</span>
+    </div>
+  </div>
+
+  <div class="flash-overlay" id="flashOverlay"></div>
+</div>
+
+<!-- ══════════ PORTFOLIO ══════════ -->
+<div id="portfolio" class="hidden">
+
+<div class="noise"></div>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="mesh-blob b1"></div>
+<div class="mesh-blob b2"></div>
+<div class="mesh-blob b3"></div>
+<div class="mesh-blob b4"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo">SS<span class="logo-dot">.</span></div>
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#github">GitHub</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+      <span class="t-sun">☀️</span>
+      <div class="t-track"><div class="t-thumb"></div></div>
+      <span class="t-moon">🌙</span>
+    </button>
+    <a href="mailto:sagarssavadatti2004@gmail.com" class="nav-cta">Hire Me ↗</a>
+  </div>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge"><span class="badge-pulse"></span>Available for opportunities</div>
+      <h1 class="hero-title">
+        <span class="ht-small">Hey, I'm</span>
+        <span class="ht-name">Sagar<span class="ht-dot">.</span></span>
+        <span class="ht-small muted">I Build</span>
+        <span class="ht-big grad">Things.</span>
+      </h1>
+      <p class="hero-desc" id="heroDesc">Full-Stack Developer · ISE Undergrad · Bangalore</p>
+      <div class="hero-tags">
+        <span>Web Dev</span><span>Fintech</span><span>Open Source</span><span>DSA</span>
+      </div>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View Projects <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="https://github.com/sagr12004" target="_blank" class="btn-outline">GitHub ↗</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hs"><span class="hs-n" data-target="6">0</span><span class="hs-plus">+</span><span class="hs-l">Projects</span></div>
+        <div class="hs-sep"></div>
+        <div class="hs"><span class="hs-n" data-target="2">0</span><span class="hs-plus">+</span><span class="hs-l">Years</span></div>
+        <div class="hs-sep"></div>
+        <div class="hs"><span class="hs-n">∞</span><span class="hs-l">Bugs Fixed</span></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="photo-wrap" id="photoWrap">
+        <div class="photo-glow"></div>
+        <div class="photo-ring r1"></div>
+        <div class="photo-ring r2"></div>
+        <img src="sagar.jpg" alt="Sagar S S" class="photo"/>
+        <div class="photo-shine"></div>
+        <div class="photo-badge">Full-Stack Dev</div>
+      </div>
+      <div class="chip c1"><span>⚡</span> Node.js</div>
+      <div class="chip c2"><span>⚛</span> React</div>
+      <div class="chip c3"><span>🎯</span> DSA</div>
+      <div class="chip c4"><span>🚀</span> Full-Stack</div>
+    </div>
+  </div>
+  <div class="scroll-cue"><div class="sc-line"></div><span>scroll</span></div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="eyebrow">/ about me</div>
+    <div class="about-grid">
+      <div class="about-left reveal">
+        <h2 class="sec-title">The Guy Behind<br/><span class="grad">The Code</span></h2>
+        <p class="ap">Hi, I'm <strong>Sagar</strong> — a passionate developer who enjoys building practical and meaningful technology. I turn ideas into real-world applications through hands-on projects, hackathons, and continuous learning.</p>
+        <p class="ap">Especially interested in <strong>web development</strong>, <strong>fintech</strong>, and exploring new tools that create simple, user-friendly solutions. I believe in <em>learning by doing</em> — one project, one bug, one breakthrough at a time.</p>
+        <p class="ap">Currently pursuing <strong>Information Science & Engineering</strong> at <strong>DSATM, Bangalore</strong> — balancing academics with building things that actually matter.</p>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/sagarssavadatti2004/" target="_blank" class="soc">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg> LinkedIn
+          </a>
+          <a href="https://github.com/sagr12004" target="_blank" class="soc">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg> GitHub
+          </a>
+          <a href="mailto:sagarssavadatti2004@gmail.com" class="soc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg> Gmail
+          </a>
+        </div>
+      </div>
+      <div class="about-right reveal">
+        <div class="glass-card info-card">
+          <div class="ic-row"><span class="ic-k">Name</span><span class="ic-v">Sagar S S</span></div>
+          <div class="ic-row"><span class="ic-k">College</span><span class="ic-v">DSATM, Bangalore</span></div>
+          <div class="ic-row"><span class="ic-k">Degree</span><span class="ic-v">ISE Undergraduate</span></div>
+          <div class="ic-row"><span class="ic-k">Location</span><span class="ic-v">Bangalore, India 📍</span></div>
+          <div class="ic-row"><span class="ic-k">Email</span><span class="ic-v sm">sagarssavadatti2004@gmail.com</span></div>
+          <div class="ic-row last"><span class="ic-k">Status</span><span class="ic-v grn"><span class="gdot"></span>Open to work</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="skills" id="skills">
+  <div class="section-inner">
+    <div class="eyebrow">/ skills</div>
+    <h2 class="sec-title reveal">My <span class="grad">Arsenal</span></h2>
+    <div class="skills-bento reveal">
+      <div class="sb featured-sb">
+        <div class="sb-label">Frontend</div>
+        <div class="sb-pills"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React.js</span><span>Tailwind</span></div>
+        <div class="sb-emoji">🎨</div>
+      </div>
+      <div class="sb">
+        <div class="sb-label">Backend</div>
+        <div class="sb-pills"><span>Node.js</span><span>Express.js</span><span>REST APIs</span><span>Firebase</span><span>Supabase</span></div>
+        <div class="sb-emoji">⚙️</div>
+      </div>
+      <div class="sb sb-accent">
+        <div class="sb-label">Languages</div>
+        <div class="sb-pills"><span>JavaScript</span><span>Python</span><span>C</span></div>
+        <div class="sb-emoji">💻</div>
+      </div>
+      <div class="sb">
+        <div class="sb-label">Tools</div>
+        <div class="sb-pills"><span>Git</span><span>GitHub</span><span>VS Code</span><span>Postman</span><span>Vite</span></div>
+        <div class="sb-emoji">🛠</div>
+      </div>
+    </div>
+    <div class="bars reveal">
+      <div class="bar"><div class="bar-top"><span>Frontend Development</span><span>85%</span></div><div class="bar-track"><div class="bar-fill" data-w="85"></div></div></div>
+      <div class="bar"><div class="bar-top"><span>Backend / Node.js</span><span>70%</span></div><div class="bar-track"><div class="bar-fill" data-w="70"></div></div></div>
+      <div class="bar"><div class="bar-top"><span>Python</span><span>65%</span></div><div class="bar-track"><div class="bar-fill" data-w="65"></div></div></div>
+      <div class="bar"><div class="bar-top"><span>DSA & Problem Solving</span><span>60%</span></div><div class="bar-track"><div class="bar-fill" data-w="60"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <div class="section-inner">
+    <div class="eyebrow">/ projects</div>
+    <h2 class="sec-title reveal">Things I've <span class="grad">Built</span></h2>
+    <div class="proj-grid reveal">
+      <div class="pc glass-card featured-pc">
+        <div class="pc-badge">Featured 🔥</div>
+        <div class="pc-num">01</div>
+        <h3 class="pc-title">TruckMate</h3>
+        <p class="pc-desc">Smart map-based assistant for truck drivers across India. Full-stack with real-time location, JWT auth, Firebase backend, and React frontend.</p>
+        <div class="pc-tech"><span>React.js</span><span>Node.js</span><span>Express</span><span>Firebase</span><span>Leaflet.js</span></div>
+        <div class="pc-links"><a href="https://github.com/sagr12004" target="_blank">GitHub ↗</a></div>
+        <div class="featured-glow"></div>
+      </div>
+      <div class="pc glass-card">
+        <div class="pc-num">02</div>
+        <h3 class="pc-title">DSA Visual Learning</h3>
+        <p class="pc-desc">Interactive Queue visualizer with Enqueue, Dequeue, Peek operations and animations.</p>
+        <div class="pc-tech"><span>HTML</span><span>CSS</span><span>JS</span></div>
+        <div class="pc-links"><a href="https://github.com/sagr12004/DSA-VISUAL-LEARNING" target="_blank">GitHub ↗</a><a href="https://sagr12004.github.io/DSA-VISUAL-LEARNING/" target="_blank" class="live">Live ↗</a></div>
+      </div>
+      <div class="pc glass-card">
+        <div class="pc-num">03</div>
+        <h3 class="pc-title">Spell Checker</h3>
+        <p class="pc-desc">Real-time spell checking web app with clean minimal UI and dictionary matching.</p>
+        <div class="pc-tech"><span>HTML</span><span>CSS</span><span>JS</span></div>
+        <div class="pc-links"><a href="https://github.com/sagr12004/Spell-Checker" target="_blank">GitHub ↗</a><a href="https://sagarsspellchecker.netlify.app/" target="_blank" class="live">Live ↗</a></div>
+      </div>
+      <div class="pc glass-card">
+        <div class="pc-num">04</div>
+        <h3 class="pc-title">MyTrips</h3>
+        <p class="pc-desc">Travel planner — explore cities, filter countries, plan trips with Supabase backend.</p>
+        <div class="pc-tech"><span>HTML</span><span>CSS</span><span>JS</span><span>Supabase</span></div>
+        <div class="pc-links"><a href="https://github.com/sagr12004/mytrips-website" target="_blank">GitHub ↗</a></div>
+      </div>
+      <div class="pc glass-card">
+        <div class="pc-num">05</div>
+        <h3 class="pc-title">AI Chatbot</h3>
+        <p class="pc-desc">Beginner-friendly AI chatbot powered by Google Gemini API and Node.js backend.</p>
+        <div class="pc-tech"><span>Node.js</span><span>Gemini API</span><span>JS</span></div>
+        <div class="pc-links"><a href="https://github.com/sagr12004/simple-ai-chatbot" target="_blank">GitHub ↗</a></div>
+      </div>
+      <div class="pc glass-card">
+        <div class="pc-num">06</div>
+        <h3 class="pc-title">AdaptiControl</h3>
+        <p class="pc-desc">Accessible computer control for disabled users via alternative input methods.</p>
+        <div class="pc-tech"><span>Python</span><span>Accessibility</span></div>
+        <div class="pc-links"><a href="https://github.com/sagr12004/AdaptiControl" target="_blank">GitHub ↗</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GITHUB ACTIVITY -->
+<section class="github-section" id="github">
+  <div class="section-inner">
+    <div class="eyebrow">/ github activity</div>
+    <h2 class="sec-title reveal">Live <span class="grad">Contributions</span></h2>
+    <div class="github-widget reveal">
+      <div class="gh-profile-row">
+        <div class="gh-avatar-wrap">
+          <img id="ghAvatar" src="" alt="GitHub Avatar" class="gh-avatar"/>
+          <div class="gh-avatar-ring"></div>
+        </div>
+        <div class="gh-info">
+          <div class="gh-name" id="ghName">sagr12004</div>
+          <div class="gh-bio" id="ghBio">Loading...</div>
+          <div class="gh-stats-row">
+            <div class="gh-stat"><span class="gh-stat-n" id="ghRepos">—</span><span class="gh-stat-l">Repos</span></div>
+            <div class="gh-stat"><span class="gh-stat-n" id="ghFollowers">—</span><span class="gh-stat-l">Followers</span></div>
+            <div class="gh-stat"><span class="gh-stat-n" id="ghFollowing">—</span><span class="gh-stat-l">Following</span></div>
+          </div>
+        </div>
+        <a href="https://github.com/sagr12004" target="_blank" class="gh-visit-btn">Visit Profile ↗</a>
+      </div>
+
+      <!-- Contribution graph embed -->
+      <div class="gh-graph-wrap">
+        <div class="gh-graph-label">Contribution Graph — Last 12 months</div>
+        <div class="gh-graph-img-wrap">
+          <img
+            src="https://ghchart.rshah.org/7c6bff/sagr12004"
+            alt="GitHub Contributions"
+            class="gh-contrib-img"
+            id="ghContribImg"
+          />
+        </div>
+      </div>
+
+      <!-- Recent repos -->
+      <div class="gh-repos-label">Recent Repositories</div>
+      <div class="gh-repos-grid" id="ghReposGrid">
+        <div class="gh-repo-skeleton"></div>
+        <div class="gh-repo-skeleton"></div>
+        <div class="gh-repo-skeleton"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="eyebrow">/ contact</div>
+    <div class="contact-grid">
+      <div class="cl reveal">
+        <h2 class="sec-title">Let's Build<br/><span class="grad">Something.</span></h2>
+        <p class="contact-sub">Got an idea, opportunity, or just want to say hi? My inbox is always open.</p>
+        <div class="cis">
+          <a href="mailto:sagarssavadatti2004@gmail.com" class="ci glass-card"><div class="ci-icon">✉</div><div><div class="ci-k">Email</div><div class="ci-v">sagarssavadatti2004@gmail.com</div></div></a>
+          <a href="https://www.linkedin.com/in/sagarssavadatti2004/" target="_blank" class="ci glass-card"><div class="ci-icon">in</div><div><div class="ci-k">LinkedIn</div><div class="ci-v">sagarssavadatti2004</div></div></a>
+          <a href="https://github.com/sagr12004" target="_blank" class="ci glass-card"><div class="ci-icon">⌥</div><div><div class="ci-k">GitHub</div><div class="ci-v">sagr12004</div></div></a>
+        </div>
+      </div>
+      <div class="cr reveal">
+        <form class="glass-card cform" id="contactForm">
+          <div class="fg"><input type="text" placeholder="Your Name" class="fi" required/></div>
+          <div class="fg"><input type="email" placeholder="Your Email" class="fi" required/></div>
+          <div class="fg"><textarea rows="5" placeholder="Your Message" class="fi" required></textarea></div>
+          <button type="submit" class="btn-primary cfbtn">Send Message <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">SS<span>.</span></div>
+    <p>Designed & Built by <strong>Sagar S S</strong> · Bangalore 🇮🇳</p>
+    <p class="fcopy">© 2025 · All Rights Reserved</p>
+  </div>
+</footer>
+
+</div><!-- end #portfolio -->
+
+<script src="script.js"></script>
+</body>
+</html>
