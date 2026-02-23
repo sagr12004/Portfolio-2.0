@@ -82,8 +82,11 @@ The portfolio is static and can be deployed to any static hosting platform:
 Sagar S S
 Information Science and Engineering, DSATM Bangalore
 sagarssavadatti2004@gmail.com
+
 https://github.com/sagr12004
+
 https://www.linkedin.com/in/sagarssavadatti2004/
+
 https://portfolio-30-sagar.vercel.app
 
 ## License
